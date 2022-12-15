@@ -44,19 +44,23 @@ clearButton.addEventListener('click', () => {})
 //addition function 
 function addNumbers(num1,num2){
     let sum = num1 + num2;
-    console.log(sum);
+    return sum
 }
 
 //subtraction function
 function subtractNumbers(num1, num2){
     let  difference = num1 - num2;
-    console.log(difference)
+    return difference
 }
 
 //multiplication function
 function multiplyNumbers(num1, num2){
     let  product = num1 * num2;
-    console.log(product)
+    return product
 }
 
 //division function 
+function divideNumbers(num1, num2){
+    let  quotient = num1 / num2;
+    return quotient;
+}
