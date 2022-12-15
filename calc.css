@@ -10,4 +10,20 @@
     height: 200px;
     width: 600px;
     background-color: aliceblue;
+    border-color: aqua;
+    border-radius: 10px;
+}
+
+.operatorButtons{
+    height: 20px;
+    width: 20px;
+    background-color: aqua;
+    border-radius: 50px;
+}
+
+.numberButtons{
+    height: 20px;
+    width: 20px;
+    background-color: aliceblue;
+    border-radius: 50px;  
 }
