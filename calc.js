@@ -41,9 +41,11 @@ equalButton.addEventListener('click', () => {})
 clearButton.addEventListener('click', () => {})
 
 
-
 //addition function 
-
+function addNumbers(num1,num2){
+    let sum = num1 + num2;
+    console.log(sum);
+}
 
 //subtraction function
 
