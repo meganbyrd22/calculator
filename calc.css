@@ -1,9 +1,10 @@
 #calcContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    height: 1000px;
-    width: 800px;
+    justify-content: flex-start;
+    padding: 30px;
+    height: 800px;
+    width: 600px;
     background-color: rgb(123, 65, 152);
     border-color: aqua;
     border-radius: 25px;
@@ -11,7 +12,7 @@
 
 #displayArea{
     height: 200px;
-    width: 700px;
+    width: 800px;
     background-color: aliceblue;
     border-color: aqua;
     border-radius: 10px;
@@ -20,18 +21,21 @@
 
 .buttons{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 10px;
+    width: 800px;
 }
 
 .operatorButtons{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: flex-end;
+    margin-right: -25px;
+    gap: 10px;
 }
 
 .operatorButtons button{
-    height: 100px;
+    height: 90px;
     width: 100px;
     background-color: aqua;
     border-radius: 50px;
@@ -39,12 +43,15 @@
     font-family: Arial, Helvetica, sans-serif; 
     font-size:xx-large;
     font-weight: 600;
-    margin-right: 20px;
 }
 
 .numberButtons{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    gap: 12px;
+    height: 600px;
+    width: 400px;
 }
 
 .numberButtons button{
@@ -66,5 +73,5 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     color: aqua;
-    padding: 20px;
+    padding: 5px;
 }
