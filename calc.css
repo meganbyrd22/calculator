@@ -1,0 +1,13 @@
+#calcContainer{
+    height: 800px;
+    width: 800px;
+    background-color: rgb(123, 65, 152);
+    border-color: aqua;
+    border-radius: 25px;
+}
+
+#displayArea{
+    height: 200px;
+    width: 600px;
+    background-color: aliceblue;
+}
