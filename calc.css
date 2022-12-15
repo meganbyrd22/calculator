@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 30px;
-    height: 850px;
+    height: 800px;
     width: 500px;
     background-color: rgb(123, 65, 152);
     border-color: aqua;
@@ -11,15 +11,15 @@
 }
 
 #displayArea{
-    height: 200px;
+    height: 150px;
     width: 800px;
     background-color: aliceblue;
     border-color: aqua;
     border-radius: 10px;
     border-width: 10px;
     border-style: solid;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .buttons{
