@@ -40,6 +40,13 @@ equalButton.addEventListener('click', () => {})
 
 clearButton.addEventListener('click', () => {})
 
+//operate function 
+function operate(num1,num2,operator){
+    if (operator === "+") addNumbers(num1, num2);
+    if (operator === "-") subtractNumbers(num1, num2);
+    if (operator === "*") multiplyNumbers(num1, num2);
+    if (operator === "/") divideNumbers(num1, num2);
+}
 
 //addition function 
 function addNumbers(num1,num2){
