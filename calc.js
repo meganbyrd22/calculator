@@ -20,6 +20,27 @@ const divideButton = document.getElementById("divideButton");
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
 
+//eventListeners
+Button1.addEventListener('click', () => {})
+Button2.addEventListener('click', () => {})
+Button3.addEventListener('click', () => {})
+Button4.addEventListener('click', () => {})
+Button5.addEventListener('click', () => {})
+Button6.addEventListener('click', () => {})
+Button7.addEventListener('click', () => {})
+Button8.addEventListener('click', () => {})
+Button9.addEventListener('click', () => {})
+Button0.addEventListener('click', () => {})
+
+addButton.addEventListener('click', () => {})
+subtractButton.addEventListener('click', () => {})
+multiplyButton.addEventListener('click', () => {})
+divideButton.addEventListener('click', () => {})
+equalButton.addEventListener('click', () => {})
+
+clearButton.addEventListener('click', () => {})
+
+
 
 //addition function 
 
