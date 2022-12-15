@@ -71,6 +71,22 @@
     margin: 5px;
 }
 
+.row1Buttons{
+    display: flex;
+    gap: 30px;
+}
+
+.row2Buttons{
+    display: flex;
+    gap: 30px;
+}
+
+.row3Buttons{
+    display: flex;
+    gap: 30px;
+}
+
+
 #clear{
     background-color: aliceblue;
     border-color: aqua;
