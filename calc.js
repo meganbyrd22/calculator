@@ -1,5 +1,4 @@
 //add html elements
-const numberButtons = document.getElementsByClassName("numberButtons");
 const Button1 = document.getElementById("Button1")
 const Button2 = document.getElementById("Button2")
 const Button3 = document.getElementById("Button3")
@@ -10,6 +9,7 @@ const Button7 = document.getElementById("Button7")
 const Button8 = document.getElementById("Button8")
 const Button9 = document.getElementById("Button9")
 const Button0 = document.getElementById("Button0")
+const displayArea = document.getElementById("displayArea");
 
 const operatorButtons = document.getElementsByClassName("operatorButtons");
 const addButton = document.getElementById("addButton");
@@ -20,7 +20,12 @@ const divideButton = document.getElementById("divideButton");
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
 
+const numberButtons = document.querySelectorAll("button");
+
 //eventListeners
+//number buttons listener
+//operator buttons listener
+
 Button1.addEventListener('click', () => {})
 Button2.addEventListener('click', () => {})
 Button3.addEventListener('click', () => {})
@@ -39,6 +44,9 @@ divideButton.addEventListener('click', () => {})
 equalButton.addEventListener('click', () => {})
 
 clearButton.addEventListener('click', () => {})
+
+
+
 
 //operate function 
 function operate(num1,num2,operator){
