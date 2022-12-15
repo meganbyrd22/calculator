@@ -48,7 +48,10 @@ function addNumbers(num1,num2){
 }
 
 //subtraction function
-
+function subtractNumbers(num1, num2){
+    let  difference = num1 - num2;
+    console.log(difference)
+}
 
 //multiplication function
 
