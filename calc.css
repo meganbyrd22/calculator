@@ -1,6 +1,8 @@
 #calcContainer{
-    
-    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 1000px;
     width: 800px;
     background-color: rgb(123, 65, 152);
     border-color: aqua;
@@ -9,10 +11,23 @@
 
 #displayArea{
     height: 200px;
-    width: 600px;
+    width: 700px;
     background-color: aliceblue;
     border-color: aqua;
     border-radius: 10px;
+    margin-top: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.operatorButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .operatorButtons button{
@@ -22,8 +37,14 @@
     border-radius: 50px;
     border-color:aliceblue;
     font-family: Arial, Helvetica, sans-serif; 
-    font-size: xx-large;
+    font-size:xx-large;
     font-weight: 600;
+    margin-right: 20px;
+}
+
+.numberButtons{
+    display: flex;
+    flex-direction: column;
 }
 
 .numberButtons button{
