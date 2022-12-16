@@ -26,15 +26,16 @@ const clearButton = document.getElementById("clear");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',() => { 
-        return (numberButton.id);
+        numberClicked = (numberButton.id);
+        appendDisplayValue(numberClicked)
     })
-    appendDisplayValue(numberButton.id);
 }
 )
+
 function appendDisplayValue(){
     let displayValue = document.createElement("div");
-    displayValue.setAttribute("id","displayValue");
-    displayArea.appendChild(displayValue);
+        displayValue.setAttribute("id","displayValue");
+        displayArea.appendChild(displayValue)
 }
 //operator buttons listener
 
