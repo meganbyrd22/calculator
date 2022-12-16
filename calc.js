@@ -28,10 +28,10 @@ numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',() => { 
         
         let numberClicked = document.createElement("div");
-         numberClicked.setAttribute("id", "numberClicked")
+         numberClicked.setAttribute("id", numberClicked);
          displayArea.appendChild(numberClicked);
-
          numberClicked = (numberButton.id);
+         
        //Element.append(numberClicked);
 
         //appendDisplayValue(numberClicked)
