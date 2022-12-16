@@ -20,10 +20,24 @@ const divideButton = document.getElementById("divideButton");
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
 
-const numberButtons = document.querySelectorAll("button");
 
 //eventListeners
 //number buttons listener
+const numberButtons = document.querySelectorAll(".numberButtons");
+numberButtons.forEach(numberButton => {
+    numberButton.addEventListener('click',() => { 
+        let numberClicked = numberButton.getAttribute;
+        return numberClicked;
+    })
+    appendDisplayValue(numberClicked);
+}
+)
+
+function appendDisplayValue(){
+    let displayValue = document.createElement("div");
+    displayValue.setAttribute("id","displayValue");
+    displayArea.appendChild(displayValue);
+}
 //operator buttons listener
 
 Button1.addEventListener('click', () => {})
