@@ -26,17 +26,24 @@ const clearButton = document.getElementById("clear");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',() => { 
-        numberClicked = (numberButton.id);
-        appendDisplayValue(numberClicked)
+        
+        let numberClicked = document.createElement("div");
+         numberClicked.setAttribute("id", "numberClicked")
+         displayArea.appendChild(numberClicked);
+
+         numberClicked = (numberButton.id);
+       //Element.append(numberClicked);
+
+        //appendDisplayValue(numberClicked)
     })
 }
 )
 
-function appendDisplayValue(){
-    let displayValue = document.createElement("div");
-        displayValue.setAttribute("id","displayValue");
-        displayArea.appendChild(displayValue)
-}
+//function appendDisplayValue(){
+    //let displayValue = document.createElement("div");
+       // displayValue.setAttribute("id","displayValue");
+       // displayArea.appendChild(displayValue)
+//}
 //operator buttons listener
 
 //Button1.addEventListener('click', () => {})
