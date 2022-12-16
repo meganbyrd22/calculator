@@ -26,7 +26,7 @@ const clearButton = document.getElementById("clear");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',() => { 
-        console.log(numberButton.id);
+        return (numberButton.id);
     })
     appendDisplayValue(numberButton.id);
 }
