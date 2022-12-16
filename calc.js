@@ -23,10 +23,10 @@ const clearButton = document.getElementById("clear");
 
 //eventListeners
 //number buttons listener
-const numberButtons = document.querySelectorAll("numberButtons");
+const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',() => { 
-        return (numberButton.id);
+        console.log(numberButton.id);
     })
     appendDisplayValue(numberButton.id);
 }
@@ -38,24 +38,24 @@ function appendDisplayValue(){
 }
 //operator buttons listener
 
-Button1.addEventListener('click', () => {})
-Button2.addEventListener('click', () => {})
-Button3.addEventListener('click', () => {})
-Button4.addEventListener('click', () => {})
-Button5.addEventListener('click', () => {})
-Button6.addEventListener('click', () => {})
-Button7.addEventListener('click', () => {})
-Button8.addEventListener('click', () => {})
-Button9.addEventListener('click', () => {})
-Button0.addEventListener('click', () => {})
+//Button1.addEventListener('click', () => {})
+//Button2.addEventListener('click', () => {})
+//Button3.addEventListener('click', () => {})
+//Button4.addEventListener('click', () => {})
+//Button5.addEventListener('click', () => {})
+//Button6.addEventListener('click', () => {})
+//Button7.addEventListener('click', () => {})
+//Button8.addEventListener('click', () => {})
+//Button9.addEventListener('click', () => {})
+//Button0.addEventListener('click', () => {})
 
-addButton.addEventListener('click', () => {})
-subtractButton.addEventListener('click', () => {})
-multiplyButton.addEventListener('click', () => {})
-divideButton.addEventListener('click', () => {})
-equalButton.addEventListener('click', () => {})
+//addButton.addEventListener('click', () => {})
+//subtractButton.addEventListener('click', () => {})
+//multiplyButton.addEventListener('click', () => {})
+//divideButton.addEventListener('click', () => {})
+//equalButton.addEventListener('click', () => {})
 
-clearButton.addEventListener('click', () => {})
+//clearButton.addEventListener('click', () => {})
 
 
 
