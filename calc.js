@@ -23,16 +23,14 @@ const clearButton = document.getElementById("clear");
 
 //eventListeners
 //number buttons listener
-const numberButtons = document.querySelectorAll(".numberButtons");
-numberButtons.forEach(numberButtons => {
-    numberButtons.addEventListener('click',() => { 
-        let numberClicked = document.getElementById(numberButton);
-        return numberClicked;
+const numberButtons = document.querySelectorAll("numberButtons");
+numberButtons.forEach(numberButton => {
+    numberButton.addEventListener('click',() => { 
+        return (numberButton.id);
     })
-    appendDisplayValue(numberClicked);
+    appendDisplayValue(numberButton.id);
 }
 )
-
 function appendDisplayValue(){
     let displayValue = document.createElement("div");
     displayValue.setAttribute("id","displayValue");
