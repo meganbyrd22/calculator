@@ -30,10 +30,24 @@ numberButtons.forEach(numberButton => {
 
         //numberClicked = (e.target.id);
         
-
+        //create and append numberClicked to DOM
         numberClicked = document.createElement("div");
-         numberClicked.setAttribute("id", `${e.target.id}`);
-         displayArea.appendChild(numberClicked).textContent;
+        numberClicked.setAttribute("id", `${e.target.id}`);
+        numberClicked.innerHTML = `${e.target.id}`;
+        numberClicked.setAttribute("style", "fontSize = xx-large", "color = black", "height = 100px", "width = 400px");
+        displayArea.appendChild(numberClicked);
+
+        //numberClicked style
+        //numberClicked.style.fontFamily = "Arial, Helvetica, sans-serif";
+        //numberClicked.id.style.fontSize = "xx-large";
+        //numberClicked.id.style.color = "black";
+        //numberClicked.id.style.width = "400px";
+        //numberClicked.id.style.height = "100px";
+
+
+
+
+
        
     
          
