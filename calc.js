@@ -32,9 +32,9 @@ numberButtons.forEach(numberButton => {
         
         //create and append numberClicked to DOM
         numberClicked = document.createElement("div");
-        numberClicked.setAttribute("id", `${e.target.id}`);
+        numberClicked.setAttribute("id", "numberClicked");
         numberClicked.innerHTML = `${e.target.id}`;
-        numberClicked.setAttribute("style", "fontSize = xx-large", "color = black", "height = 100px", "width = 400px");
+        //numberClicked.setAttribute("style", "fontSize = xx-large", "color = black", "height = 100px", "width = 400px");
         displayArea.appendChild(numberClicked);
 
         //numberClicked style
