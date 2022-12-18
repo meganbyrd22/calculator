@@ -10,6 +10,7 @@ const Button8 = document.getElementById("Button8")
 const Button9 = document.getElementById("Button9")
 const Button0 = document.getElementById("Button0")
 const displayArea = document.getElementById("displayArea");
+let numberClicked = " "
 
 const operatorButtons = document.getElementsByClassName("operatorButtons");
 const addButton = document.getElementById("addButton");
@@ -26,11 +27,14 @@ const clearButton = document.getElementById("clear");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',() => { 
+
+        numberClicked = (numberButton.id);
+        console.log(numberClicked);
         
-        let numberClicked = document.createElement("div");
-         numberClicked.setAttribute("id", numberClicked);
-         displayArea.appendChild(numberClicked);
-         numberClicked = (numberButton.id);
+        //let numberClicked = document.createElement("div");
+        // numberClicked.setAttribute("id", numberClicked);
+         //displayArea.appendChild(numberClicked);
+         //numberClicked = (numberButton.id);
          
        //Element.append(numberClicked);
 
