@@ -26,10 +26,11 @@ const clearButton = document.getElementById("clear");
 //number buttons listener
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
-    numberButton.addEventListener('click',() => { 
+    numberButton.addEventListener('click',(e) => { 
 
-        numberClicked = (numberButton.id);
+        numberClicked = (e.target.id)
         console.log(numberClicked);
+        
         
         //let numberClicked = document.createElement("div");
         // numberClicked.setAttribute("id", numberClicked);
@@ -38,16 +39,16 @@ numberButtons.forEach(numberButton => {
          
        //Element.append(numberClicked);
 
-        //appendDisplayValue(numberClicked)
+       // appendDisplayValue(numberClicked)
     })
 }
 )
 
-//function appendDisplayValue(){
-    //let displayValue = document.createElement("div");
-       // displayValue.setAttribute("id","displayValue");
-       // displayArea.appendChild(displayValue)
-//}
+function appendDisplayValue(){
+    let displayValue = document.createElement("div");
+        displayValue.setAttribute("id","displayValue");
+        displayArea.appendChild(displayValue)
+}
 //operator buttons listener
 
 //Button1.addEventListener('click', () => {})
