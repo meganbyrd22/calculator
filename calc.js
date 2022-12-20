@@ -12,7 +12,6 @@ const Button0 = document.getElementById("Button0")
 const displayArea = document.getElementById("displayArea");
 let numberClicked = document.getElementById("numberClicked");
 
-const operatorButtons = document.getElementsByClassName("operatorButtons");
 const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
 const multiplyButton = document.getElementById("multiplyButton");
@@ -23,13 +22,11 @@ const clearButton = document.getElementById("clear");
 
 
 //eventListeners
+
 //number buttons listener
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
-
-        //numberClicked = (e.target.id);
-        
         //create and append numberClicked to DOM
         numberClicked = document.createElement("div");
         numberClicked.setAttribute("id", "numberClicked");
@@ -39,12 +36,24 @@ numberButtons.forEach(numberButton => {
 }
 )
 
-function appendDisplayValue(){
-    let displayValue = document.createElement("div");
-        displayValue.setAttribute("id","displayValue");
-        displayArea.appendChild(displayValue)
-}
+
 //operator buttons listener
+const operatorButtons = document.querySelectorAll('.operatorButtons');
+operatorButtons.forEach(operatorButton => {
+    operatorButton.addEventListener('click',(e) => { 
+        //create and append operatorClicked to DOM
+        operatorClicked = document.createElement("div");
+        operatorClicked.setAttribute("id", "operatorClicked");
+        operatorClicked.innerHTML = `${e.target.id}`;
+        displayArea.appendChild(operatorClicked);
+    })
+}
+)
+
+
+
+
+
 
 //Button1.addEventListener('click', () => {})
 //Button2.addEventListener('click', () => {})
