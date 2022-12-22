@@ -36,7 +36,6 @@ numberButtons.forEach(numberButton => {
 }
 )
 
-
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
@@ -49,6 +48,11 @@ operatorButtons.forEach(operatorButton => {
     })
 }
 )
+
+const clear = document.getElementById("clear");
+clear.addEventListener('click', () => {
+    displayArea.replaceChildren()
+})
 
 
 
@@ -108,3 +112,5 @@ function divideNumbers(num1, num2){
     let  quotient = num1 / num2;
     return quotient;
 }
+
+
