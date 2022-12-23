@@ -95,6 +95,10 @@
     font-weight: 600; 
 }
 
+#otherButtons{
+    display: flex;
+}
+
 .numberButtons{
     display: flex;
     flex-wrap: wrap; 
