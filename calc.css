@@ -84,7 +84,14 @@
 }
 
 #equal {
-    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-right: -200px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    margin-top: -125px;
     height: 90px;
     width: 100px;
     background-color: aqua;
@@ -95,8 +102,13 @@
     font-weight: 600; 
 }
 
-#otherButtons{
+.otherButtons{
     display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    /*float: right;*/
+    margin-left: 200px;
+    margin-bottom: 20px;
 }
 
 .numberButtons{
@@ -147,9 +159,9 @@
     flex-wrap: wrap;
     float: right;
     /*margin: 0 auto;*/
-    margin-left: -500px;
+    margin-left: -55px;
     margin-top: -100px;
-    height: 75px;
+    height: 100px;
     width: 225px;
     /*padding: 6px;*/
     justify-content: center;
@@ -157,7 +169,7 @@
     background-color: aliceblue;
     border-color: aqua;
     border-radius: 10px;
-    font-size:large;
+    font-size:xx-large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     color: aqua;
