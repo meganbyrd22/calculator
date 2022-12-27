@@ -27,6 +27,8 @@ const clearButton = document.getElementById("clear");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
+        //clear displayArea
+        clearDisplay(displayArea);
         //create and append numberClicked to DOM
         numberClicked = document.createElement("div");
         numberClicked.setAttribute("id", "numberClicked");
@@ -41,7 +43,7 @@ const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
         //clear displayArea
-        clearDisplay();
+        clearDisplay(displayArea);
         //create and append operatorClicked to DOM
         operatorClicked = document.createElement("div");
         operatorClicked.setAttribute("id", "operatorClicked");
