@@ -40,6 +40,8 @@ numberButtons.forEach(numberButton => {
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
+        //clear displayArea
+        clearDisplay();
         //create and append operatorClicked to DOM
         operatorClicked = document.createElement("div");
         operatorClicked.setAttribute("id", "operatorClicked");
@@ -49,15 +51,15 @@ operatorButtons.forEach(operatorButton => {
 }
 )
 
-const clear = document.getElementById("clear");
+const clear = (document.getElementById)("clear");
 clear.addEventListener('click', () => {
     displayArea.replaceChildren()
 })
 
-
-
-
-
+//function to clear displayArea
+function clearDisplay(){
+    displayArea.replaceChildren()
+};
 
 //Button1.addEventListener('click', () => {})
 //Button2.addEventListener('click', () => {})
