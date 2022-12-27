@@ -20,6 +20,9 @@ const divideButton = document.getElementById("divideButton");
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
 
+let num1 = " ";
+let num2 = " ";
+
 
 //eventListeners
 
