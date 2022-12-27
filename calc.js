@@ -10,7 +10,7 @@ const Button8 = document.getElementById("Button8")
 const Button9 = document.getElementById("Button9")
 const Button0 = document.getElementById("Button0")
 const displayArea = document.getElementById("displayArea");
-let numberClicked = document.getElementById("numberClicked");
+let numberClicked = Number(document.getElementById("numberClicked"));
 
 const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
@@ -39,17 +39,9 @@ numberButtons.forEach(numberButton => {
         numberClicked = document.createElement("div");
         numberClicked.setAttribute("id", "numberClicked");
         numberClicked.innerHTML = `${e.target.id}`;
-
+        //num1 = parseInt(numberClicked);
         displayArea.appendChild(numberClicked);
 
-        //create and append second numberClicked to DOM
-        //secondNumberClicked = document.createElement("div");
-       // secondNumberClicked.setAttribute("id", "secondNumberClicked");
-       // secondNumberClicked.innerHTML = `${e.target.id}`;
-
-        // multidigitNumber = (numberClicked + secondNumberClicked);
-
-       // displayArea.append(multidigitNumber);
     })
 }
 )
