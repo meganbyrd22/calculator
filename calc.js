@@ -23,6 +23,8 @@ const clearButton = document.getElementById("clear");
 let num1 = " ";
 let num2 = " ";
 
+let multidigitNumber = " ";
+
 
 //eventListeners
 
@@ -31,12 +33,23 @@ const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
         //clear displayArea
-        clearDisplay(displayArea);
+        //clearDisplay(displayArea);
+
         //create and append numberClicked to DOM
         numberClicked = document.createElement("div");
         numberClicked.setAttribute("id", "numberClicked");
         numberClicked.innerHTML = `${e.target.id}`;
+
         displayArea.appendChild(numberClicked);
+
+        //create and append second numberClicked to DOM
+        //secondNumberClicked = document.createElement("div");
+       // secondNumberClicked.setAttribute("id", "secondNumberClicked");
+       // secondNumberClicked.innerHTML = `${e.target.id}`;
+
+        // multidigitNumber = (numberClicked + secondNumberClicked);
+
+       // displayArea.append(multidigitNumber);
     })
 }
 )
