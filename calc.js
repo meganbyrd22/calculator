@@ -36,11 +36,15 @@ numberButtons.forEach(numberButton => {
         //clearDisplay(displayArea);
 
         //create and append numberClicked to DOM
-        numberClicked = document.createElement("div");
-        numberClicked.setAttribute("id", "numberClicked");
-        numberClicked.innerHTML = `${e.target.id}`;
+       // numberClicked = document.createElement("div");
+        //numberClicked.setAttribute("id", "numberClicked");
+        //numberClicked.innerHTML = `${e.target.id}`;
         //num1 = parseInt(numberClicked);
-        displayArea.appendChild(numberClicked);
+
+        numberClicked = `${e.target.id}`
+        displayArea.append(numberClicked);
+
+
 
     })
 }
