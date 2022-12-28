@@ -10,7 +10,7 @@ const Button8 = document.getElementById("Button8")
 const Button9 = document.getElementById("Button9")
 const Button0 = document.getElementById("Button0")
 const displayArea = document.getElementById("displayArea");
-let numberClicked = Number(document.getElementById("numberClicked"));
+//let numberClicked = Number(document.getElementById("numberClicked"));
 
 const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
@@ -40,15 +40,18 @@ numberButtons.forEach(numberButton => {
         //numberClicked.setAttribute("id", "numberClicked");
         //numberClicked.innerHTML = `${e.target.id}`;
         //num1 = parseInt(numberClicked);
-
-        numberClicked = `${e.target.id}`
-        displayArea.append(numberClicked);
-
-
+        
+        
+        numberClicked = `${e.target.id}`;
+        displayArea.textContent += numberClicked;
+        
+        //displayArea.append(numberClicked);
 
     })
 }
 )
+
+
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
