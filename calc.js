@@ -32,26 +32,11 @@ let multidigitNumber = " ";
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
-        //clear displayArea
-        //clearDisplay(displayArea);
-
-        //create and append numberClicked to DOM
-       // numberClicked = document.createElement("div");
-        //numberClicked.setAttribute("id", "numberClicked");
-        //numberClicked.innerHTML = `${e.target.id}`;
-        //num1 = parseInt(numberClicked);
-        
-        
-        numberClicked = `${e.target.id}`;
-        displayArea.textContent += numberClicked;
-        
-        //displayArea.append(numberClicked);
-
+    numberClicked = `${e.target.id}`;
+    displayArea.textContent += numberClicked;
     })
 }
 )
-
-
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
