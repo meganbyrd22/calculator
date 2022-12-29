@@ -10,7 +10,7 @@ const Button8 = document.getElementById("Button8")
 const Button9 = document.getElementById("Button9")
 const Button0 = document.getElementById("Button0")
 const displayArea = document.getElementById("displayArea");
-//let numberClicked = Number(document.getElementById("numberClicked"));
+let numberClicked = Number('');
 
 const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
@@ -20,8 +20,8 @@ const divideButton = document.getElementById("divideButton");
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
 
-let num1 = " ";
-let num2 = " ";
+let num1 = Number(" ");
+let num2 = Number(" ");
 
 let multidigitNumber = " ";
 
@@ -32,8 +32,10 @@ let multidigitNumber = " ";
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
-    numberClicked = `${e.target.id}`;
+    numberClicked = Number(`${e.target.id}`);
     displayArea.textContent += numberClicked;
+    num1 = displayArea.textContent;
+    console.log(num1);
     })
 }
 )
