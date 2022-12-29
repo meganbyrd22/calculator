@@ -34,6 +34,13 @@ const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
     numberClicked = Number(`${e.target.id}`);
+    //numberClicked = displayArea.textContent;
+    if (operatorButtonClicked == false){
+        num1 = numberClicked;
+    }
+    else if (operatorButtonClicked == true){
+        num2 = numberClicked;
+    }  
     displayNumberClicked(numberClicked);
     })
 }
@@ -42,13 +49,6 @@ numberButtons.forEach(numberButton => {
 //append numberClicked
 function displayNumberClicked(){
     displayArea.textContent += numberClicked;
-    numberClicked = displayArea.textContent;
-    if (operatorButtonClicked == false){
-        num1 = numberClicked
-    }
-    else if (operatorButtonClicked == true){
-        num2 = numberClicked
-    }
     console.log(num1, num2);
 }
 
@@ -69,6 +69,7 @@ operatorButtons.forEach(operatorButton => {
 function displayOperatorClicked(){
     displayArea.append(operatorClicked);
     operatorButtonClicked == true;
+    console.log(operatorClicked);
 }
 
 const clear = (document.getElementById)("clear");
