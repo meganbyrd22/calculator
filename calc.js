@@ -57,19 +57,16 @@ operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
         //clear displayArea
         clearDisplay(displayArea);
-        //create and append operatorClicked to DOM
-        operatorClicked = document.createElement("div");
-        operatorClicked.setAttribute("id", "operatorClicked");
-        operatorClicked.innerHTML = `${e.target.id}`;
-        displayArea.appendChild(operatorClicked);
-        operatorClicked = true;
+        //create operatorClicked variable
+        operatorClicked = `${e.target.id}`;
+        displayOperatorClicked(operatorClicked);
     })
 }
 )
 
 //append operatorClicked 
-function displayOperatorClicked{
-    
+function displayOperatorClicked(){
+    displayArea.append(operatorClicked);
 }
 
 const clear = (document.getElementById)("clear");
