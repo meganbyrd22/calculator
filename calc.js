@@ -41,7 +41,14 @@ numberButtons.forEach(numberButton => {
 //append numberClicked
 function displayNumberClicked(){
     displayArea.textContent += numberClicked;
-    num1 = displayArea.textContent;
+    numberClicked = displayArea.textContent;
+    if (operatorClicked = false){
+        num1 = numberClicked
+    }
+    else if (operatorClicked = true){
+        num2 = numberClicked
+    }
+    console.log(num1, num2);
 }
 
 //operator buttons listener
@@ -55,9 +62,15 @@ operatorButtons.forEach(operatorButton => {
         operatorClicked.setAttribute("id", "operatorClicked");
         operatorClicked.innerHTML = `${e.target.id}`;
         displayArea.appendChild(operatorClicked);
+        operatorClicked = true;
     })
 }
 )
+
+//append operatorClicked 
+function displayOperatorClicked{
+    
+}
 
 const clear = (document.getElementById)("clear");
 clear.addEventListener('click', () => {
