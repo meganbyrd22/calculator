@@ -34,7 +34,7 @@ const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
     numberClicked = Number(`${e.target.id}`);
-    //numberClicked = displayArea.textContent;
+    
     if (operatorButtonClicked == false){
         num1 = numberClicked;
     }
@@ -48,6 +48,7 @@ numberButtons.forEach(numberButton => {
 
 //append numberClicked
 function displayNumberClicked(){
+    clearDisplay();
     displayArea.textContent += numberClicked;
     console.log(num1, num2);
 }
