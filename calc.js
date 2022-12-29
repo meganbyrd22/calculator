@@ -33,12 +33,16 @@ const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
     numberClicked = Number(`${e.target.id}`);
-    displayArea.textContent += numberClicked;
-    num1 = displayArea.textContent;
-    console.log(num1);
+    displayNumberClicked(numberClicked);
     })
 }
 )
+
+//append numberClicked
+function displayNumberClicked(){
+    displayArea.textContent += numberClicked;
+    num1 = displayArea.textContent;
+}
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
