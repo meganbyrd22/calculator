@@ -16,6 +16,7 @@ const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
 const multiplyButton = document.getElementById("multiplyButton");
 const divideButton = document.getElementById("divideButton");
+let operatorButtonClicked = false;
 
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
@@ -42,10 +43,10 @@ numberButtons.forEach(numberButton => {
 function displayNumberClicked(){
     displayArea.textContent += numberClicked;
     numberClicked = displayArea.textContent;
-    if (operatorClicked = false){
+    if (operatorButtonClicked == false){
         num1 = numberClicked
     }
-    else if (operatorClicked = true){
+    else if (operatorButtonClicked == true){
         num2 = numberClicked
     }
     console.log(num1, num2);
@@ -67,6 +68,7 @@ operatorButtons.forEach(operatorButton => {
 //append operatorClicked 
 function displayOperatorClicked(){
     displayArea.append(operatorClicked);
+    operatorButtonClicked == true;
 }
 
 const clear = (document.getElementById)("clear");
