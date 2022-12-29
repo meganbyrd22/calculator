@@ -65,14 +65,13 @@ operatorButtons.forEach(operatorButton => {
     })
 }
 )
-
 //append operatorClicked 
 function displayOperatorClicked(){
     displayArea.append(operatorClicked);
     operatorButtonClicked == true;
     console.log(operatorClicked);
 }
-
+//clear button event listener
 const clear = (document.getElementById)("clear");
 clear.addEventListener('click', () => {
     displayArea.replaceChildren()
@@ -82,6 +81,12 @@ clear.addEventListener('click', () => {
 function clearDisplay(){
     displayArea.replaceChildren()
 };
+
+//equal button eventListener
+const equal = (document.getElementById)("equal");
+equal.addEventListener('click', () => {
+    operate();
+})
 
 //Button1.addEventListener('click', () => {})
 //Button2.addEventListener('click', () => {})
