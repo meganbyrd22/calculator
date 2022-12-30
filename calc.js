@@ -1,21 +1,4 @@
 //add html elements
-const Button1 = document.getElementById("Button1")
-const Button2 = document.getElementById("Button2")
-const Button3 = document.getElementById("Button3")
-const Button4 = document.getElementById("Button4")
-const Button5 = document.getElementById("Button5")
-const Button6 = document.getElementById("Button6")
-const Button7 = document.getElementById("Button7")
-const Button8 = document.getElementById("Button8")
-const Button9 = document.getElementById("Button9")
-const Button0 = document.getElementById("Button0")
-const displayArea = document.getElementById("displayArea");
-let numberClicked = Number('');
-
-const addButton = document.getElementById("addButton");
-const subtractButton = document.getElementById("subtractButton");
-const multiplyButton = document.getElementById("multiplyButton");
-const divideButton = document.getElementById("divideButton");
 let operatorButtonClicked = false;
 
 const equalButton = document.getElementById("equalButton");
@@ -23,9 +6,7 @@ const clearButton = document.getElementById("clear");
 
 let num1 = Number(" ");
 let num2 = Number(" ");
-
-let multidigitNumber = " ";
-
+let numberClicked = document.getElementById("numberClicked");
 
 //eventListeners
 
@@ -33,23 +14,25 @@ let multidigitNumber = " ";
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
-    numberClicked = Number(`${e.target.id}`);
+    numberClicked = `${e.target.id}`;
+    displayArea.append(numberClicked);
+    console.log(displayArea.textContent)
     
-    if (operatorButtonClicked == false){
-        num1 = numberClicked;
-    }
-    else if (operatorButtonClicked == true){
-        num2 = numberClicked;
-    }  
-    displayNumberClicked(numberClicked);
+    //displayNumberClicked(numberClicked);
     })
 }
 )
 
 //append numberClicked
-function displayNumberClicked(){
+function displayNumberClicked(numberClicked){
     clearDisplay();
-    displayArea.textContent += numberClicked;
+    //displayArea.append(numberClicked);
+    if (operatorButtonClicked == false){
+        num1 = displayArea.textContent;
+    }
+    else if (operatorButtonClicked == true){
+        num2 = displayArea.textContent;
+    } 
     console.log(num1, num2);
 }
 
@@ -90,7 +73,7 @@ equal.addEventListener('click', () => {
 
 
 //operate function 
-function operate(){
+function operate(num1,num2,operatorClicked){
     if (operatorClicked === "+") addNumbers();
     if (operatorClicked === "-") subtractNumbers(num1, num2);
     if (operatorClicked === "*") multiplyNumbers(num1, num2);
@@ -98,8 +81,8 @@ function operate(){
 }
 
 //addition function 
-function addNumbers(){
-    let sum = num1 + num2;
+function addNumbers(num1, num2){
+    let sum = (num1 + num2);
     console.log(sum);
 }
 
@@ -140,3 +123,22 @@ function divideNumbers(num1, num2){
 //equalButton.addEventListener('click', () => {})
 
 //clearButton.addEventListener('click', () => {})
+
+
+const Button1 = document.getElementById("Button1")
+const Button2 = document.getElementById("Button2")
+const Button3 = document.getElementById("Button3")
+const Button4 = document.getElementById("Button4")
+const Button5 = document.getElementById("Button5")
+const Button6 = document.getElementById("Button6")
+const Button7 = document.getElementById("Button7")
+const Button8 = document.getElementById("Button8")
+const Button9 = document.getElementById("Button9")
+const Button0 = document.getElementById("Button0")
+const displayArea = document.getElementById("displayArea");
+
+
+const addButton = document.getElementById("addButton");
+const subtractButton = document.getElementById("subtractButton");
+const multiplyButton = document.getElementById("multiplyButton");
+const divideButton = document.getElementById("divideButton");
