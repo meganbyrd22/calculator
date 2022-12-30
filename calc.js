@@ -1,5 +1,5 @@
 //add html elements
-let operatorButtonClicked = false;
+let operatorButtonClicked = " ";
 
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
@@ -44,13 +44,13 @@ operatorButtons.forEach(operatorButton => {
         //create operatorClicked variable
         operatorClicked = `${e.target.id}`;
         displayOperatorClicked(operatorClicked);
+        operatorButtonClicked == true;
     })
 }
 )
 //append operatorClicked 
 function displayOperatorClicked(){
     displayArea.append(operatorClicked);
-    operatorButtonClicked == true;
     console.log(operatorClicked);
 }
 //clear button event listener
