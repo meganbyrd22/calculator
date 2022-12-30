@@ -1,5 +1,5 @@
 //add html elements
-let operatorButtonClicked = " ";
+let operatorButtonClicked = false;
 
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
@@ -14,25 +14,28 @@ let numberClicked = document.getElementById("numberClicked");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
+    clearDisplay();
     numberButtonClicked = `${e.target.id}`;
     //append numberClicked to displayArea
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
-    //console.log(numberClicked);
-    
-    if (operatorButtonClicked == false){
-       num1 = numberClicked;
-    }
-    else if (operatorButtonClicked == true){
-        clearDisplay();
-        num2 = numberClicked;
-    } 
-    console.log(num1, num2);
-    
-    //displayNumberClicked(numberClicked);
+    console.log(numberClicked);
+    assignNumbers(numberClicked);
     })
 }
 )
+
+//function to assign num1 and num2
+function assignNumbers(){
+    if (operatorButtonClicked == false){
+        num1 = numberClicked;
+     }
+     else if (operatorButtonClicked == true){
+         clearDisplay();
+         num2 = numberClicked;
+     }   
+     console.log(num1, num2);
+}
 
 
 //operator buttons listener
