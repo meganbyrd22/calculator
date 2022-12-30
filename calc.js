@@ -15,8 +15,17 @@ const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
     numberClicked = `${e.target.id}`;
+    //append numberClicked to displayArea
     displayArea.append(numberClicked);
-    console.log(displayArea.textContent)
+    console.log(displayArea.textContent);
+    
+    if (operatorButtonClicked == false){
+        //num1 = displayArea.textContent;
+    }
+    else if (operatorButtonClicked == true){
+       // clearDisplay();
+        num2 = displayArea.textContent;
+    } 
     
     //displayNumberClicked(numberClicked);
     })
@@ -25,14 +34,9 @@ numberButtons.forEach(numberButton => {
 
 //append numberClicked
 function displayNumberClicked(numberClicked){
-    clearDisplay();
+    ;
     //displayArea.append(numberClicked);
-    if (operatorButtonClicked == false){
-        num1 = displayArea.textContent;
-    }
-    else if (operatorButtonClicked == true){
-        num2 = displayArea.textContent;
-    } 
+   
     console.log(num1, num2);
 }
 
