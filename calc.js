@@ -85,43 +85,22 @@ function clearDisplay(){
 //equal button eventListener
 const equal = (document.getElementById)("equal");
 equal.addEventListener('click', () => {
-    operate();
+    operate(num1, num2, operatorClicked);
 })
-
-//Button1.addEventListener('click', () => {})
-//Button2.addEventListener('click', () => {})
-//Button3.addEventListener('click', () => {})
-//Button4.addEventListener('click', () => {})
-//Button5.addEventListener('click', () => {})
-//Button6.addEventListener('click', () => {})
-//Button7.addEventListener('click', () => {})
-//Button8.addEventListener('click', () => {})
-//Button9.addEventListener('click', () => {})
-//Button0.addEventListener('click', () => {})
-
-//addButton.addEventListener('click', () => {})
-//subtractButton.addEventListener('click', () => {})
-//multiplyButton.addEventListener('click', () => {})
-//divideButton.addEventListener('click', () => {})
-//equalButton.addEventListener('click', () => {})
-
-//clearButton.addEventListener('click', () => {})
-
-
 
 
 //operate function 
-function operate(num1,num2,operator){
-    if (operator === "+") addNumbers(num1, num2);
-    if (operator === "-") subtractNumbers(num1, num2);
-    if (operator === "*") multiplyNumbers(num1, num2);
-    if (operator === "/") divideNumbers(num1, num2);
+function operate(){
+    if (operatorClicked === "+") addNumbers();
+    if (operatorClicked === "-") subtractNumbers(num1, num2);
+    if (operatorClicked === "*") multiplyNumbers(num1, num2);
+    if (operatorClicked === "/") divideNumbers(num1, num2);
 }
 
 //addition function 
-function addNumbers(num1,num2){
+function addNumbers(){
     let sum = num1 + num2;
-    return sum
+    console.log(sum);
 }
 
 //subtraction function
@@ -143,3 +122,21 @@ function divideNumbers(num1, num2){
 }
 
 
+//Button1.addEventListener('click', () => {})
+//Button2.addEventListener('click', () => {})
+//Button3.addEventListener('click', () => {})
+//Button4.addEventListener('click', () => {})
+//Button5.addEventListener('click', () => {})
+//Button6.addEventListener('click', () => {})
+//Button7.addEventListener('click', () => {})
+//Button8.addEventListener('click', () => {})
+//Button9.addEventListener('click', () => {})
+//Button0.addEventListener('click', () => {})
+
+//addButton.addEventListener('click', () => {})
+//subtractButton.addEventListener('click', () => {})
+//multiplyButton.addEventListener('click', () => {})
+//divideButton.addEventListener('click', () => {})
+//equalButton.addEventListener('click', () => {})
+
+//clearButton.addEventListener('click', () => {})
