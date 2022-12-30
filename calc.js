@@ -31,12 +31,10 @@ function assignNumbers(){
         num1 = numberClicked;
      }
      else if (operatorButtonClicked == true){
-         clearDisplay();
          num2 = numberClicked;
      }   
      console.log(num1, num2);
 }
-
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
@@ -72,7 +70,6 @@ const equal = (document.getElementById)("equal");
 equal.addEventListener('click', () => {
     operate(num1, num2, operatorClicked);
 })
-
 
 //operate function 
 function operate(num1,num2,operatorClicked){
