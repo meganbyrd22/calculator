@@ -14,18 +14,19 @@ let numberClicked = document.getElementById("numberClicked");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
-    numberClicked = `${e.target.id}`;
+    numberButtonClicked = `${e.target.id}`;
     //append numberClicked to displayArea
-    displayArea.append(numberClicked);
-    console.log(displayArea.textContent);
+    displayArea.append(numberButtonClicked);
+    numberClicked = displayArea.textContent;
+    console.log(numberClicked);
     
-    if (operatorButtonClicked == false){
-        //num1 = displayArea.textContent;
-    }
-    else if (operatorButtonClicked == true){
+    //if (operatorButtonClicked == false){
+       //num1 = displayArea.textContent;
+    //}
+    //else if (operatorButtonClicked == true){
        // clearDisplay();
-        num2 = displayArea.textContent;
-    } 
+        //num2 = displayArea.textContent;
+    //} 
     
     //displayNumberClicked(numberClicked);
     })
