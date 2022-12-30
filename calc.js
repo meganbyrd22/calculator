@@ -18,28 +18,22 @@ numberButtons.forEach(numberButton => {
     //append numberClicked to displayArea
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
-    console.log(numberClicked);
+    //console.log(numberClicked);
     
-    //if (operatorButtonClicked == false){
-       //num1 = displayArea.textContent;
-    //}
-    //else if (operatorButtonClicked == true){
-       // clearDisplay();
-        //num2 = displayArea.textContent;
-    //} 
+    if (operatorButtonClicked == false){
+       num1 = numberClicked;
+    }
+    else if (operatorButtonClicked == true){
+        clearDisplay();
+        num2 = numberClicked;
+    } 
+    console.log(num1, num2);
     
     //displayNumberClicked(numberClicked);
     })
 }
 )
 
-//append numberClicked
-function displayNumberClicked(numberClicked){
-    ;
-    //displayArea.append(numberClicked);
-   
-    console.log(num1, num2);
-}
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
