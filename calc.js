@@ -77,7 +77,7 @@ equal.addEventListener('click', () => {
 
 //operate function 
 function operate(num1,num2,operatorClicked){
-    if (operatorClicked === "+") addNumbers();
+    if (operatorClicked === "+") addNumbers(num1, num2);
     if (operatorClicked === "-") subtractNumbers(num1, num2);
     if (operatorClicked === "*") multiplyNumbers(num1, num2);
     if (operatorClicked === "/") divideNumbers(num1, num2);
@@ -86,7 +86,9 @@ function operate(num1,num2,operatorClicked){
 //addition function 
 function addNumbers(num1, num2){
     let sum = (num1 + num2);
-    console.log(Number(sum));
+    //console.log(Number(sum));
+    clearDisplay();
+    displayArea.append(sum);
 }
 
 //subtraction function
