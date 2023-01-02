@@ -14,7 +14,7 @@ let numberClicked = document.getElementById("numberClicked");
 const numberButtons = document.querySelectorAll('.numberButtons');
 numberButtons.forEach(numberButton => {
     numberButton.addEventListener('click',(e) => { 
-    clearDisplay();
+    //clearDisplay();
     numberButtonClicked = `${e.target.id}`;
     //append numberClicked to displayArea
     displayArea.append(numberButtonClicked);
