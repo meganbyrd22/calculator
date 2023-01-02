@@ -8,6 +8,8 @@ let num1 = Number(" ");
 let num2 = Number(" ");
 let numberClicked = document.getElementById("numberClicked");
 
+let sum = Number(document.getElementById("sum"));
+
 //eventListeners
 
 //number buttons listener
@@ -40,7 +42,7 @@ numberButtons.forEach(numberButton => {
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
-        num1 = displayArea.textContent;
+        num1 = Number(displayArea.textContent);
         //clear displayArea
         clearDisplay(displayArea);
         //create operatorClicked variable
@@ -69,7 +71,7 @@ function clearDisplay(){
 //equal button eventListener
 const equal = (document.getElementById)("equal");
 equal.addEventListener('click', () => {
-    num2 = displayArea.textContent;
+    num2 = Number(displayArea.textContent);
     operate(num1, num2, operatorClicked);
 })
 
