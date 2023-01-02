@@ -26,21 +26,10 @@ numberButtons.forEach(numberButton => {
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
     console.log(numberClicked);
-    //assignNumbers(numberClicked);
     })
 }
 )
 
-//function to assign num1 and num2
-//function assignNumbers(){
-    //if (operatorButtonClicked == false){
-        //num1 = numberClicked;
-     //}
-     //else if (operatorButtonClicked == true){
-        // num2 = numberClicked;
-     //}   
-     //console.log(num1, num2);
-//}
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
@@ -52,7 +41,6 @@ operatorButtons.forEach(operatorButton => {
         //create operatorClicked variable
         operatorClicked = `${e.target.id}`;
         displayOperatorClicked(operatorClicked);
-        operatorButtonClicked == true;
     })
 }
 )
