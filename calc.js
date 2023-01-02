@@ -20,26 +20,27 @@ numberButtons.forEach(numberButton => {
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
     console.log(numberClicked);
-    assignNumbers(numberClicked);
+    //assignNumbers(numberClicked);
     })
 }
 )
 
 //function to assign num1 and num2
-function assignNumbers(){
-    if (operatorButtonClicked == false){
-        num1 = numberClicked;
-     }
-     else if (operatorButtonClicked == true){
-         num2 = numberClicked;
-     }   
-     console.log(num1, num2);
-}
+//function assignNumbers(){
+    //if (operatorButtonClicked == false){
+        //num1 = numberClicked;
+     //}
+     //else if (operatorButtonClicked == true){
+        // num2 = numberClicked;
+     //}   
+     //console.log(num1, num2);
+//}
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
+        num1 = displayArea.textContent;
         //clear displayArea
         clearDisplay(displayArea);
         //create operatorClicked variable
@@ -68,6 +69,7 @@ function clearDisplay(){
 //equal button eventListener
 const equal = (document.getElementById)("equal");
 equal.addEventListener('click', () => {
+    num2 = displayArea.textContent;
     operate(num1, num2, operatorClicked);
 })
 
@@ -82,7 +84,7 @@ function operate(num1,num2,operatorClicked){
 //addition function 
 function addNumbers(num1, num2){
     let sum = (num1 + num2);
-    console.log(sum);
+    console.log(Number(sum));
 }
 
 //subtraction function
