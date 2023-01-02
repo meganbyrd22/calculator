@@ -9,6 +9,10 @@ let num2 = Number(" ");
 let numberClicked = document.getElementById("numberClicked");
 
 let sum = Number(document.getElementById("sum"));
+let difference = Number(document.getElementById("difference"));
+let product = Number(document.getElementById("product"));
+let quotient = Number(document.getElementById("quotient"));
+
 
 //eventListeners
 
@@ -94,19 +98,22 @@ function addNumbers(num1, num2){
 //subtraction function
 function subtractNumbers(num1, num2){
     let  difference = num1 - num2;
-    return difference
+    clearDisplay();
+    displayArea.append(difference);
 }
 
 //multiplication function
 function multiplyNumbers(num1, num2){
     let  product = num1 * num2;
-    return product
+    clearDisplay();
+    displayArea.append(product);
 }
 
 //division function 
 function divideNumbers(num1, num2){
     let  quotient = num1 / num2;
-    return quotient;
+    clearDisplay();
+    displayArea.append(quotient);
 }
 
 
