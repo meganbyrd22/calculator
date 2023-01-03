@@ -40,11 +40,16 @@ operatorButtons.forEach(operatorButton => {
         clearDisplay(displayArea);
         //append operatorClicked to displayArea
         operatorClicked = `${e.target.id}`;
-        displayArea.append(operatorClicked)
-        //displayOperatorClicked(operatorClicked);
+        displayOperatorClicked(operatorClicked);
     })
 }
 )
+//function to append operatorClicked to DOM
+function displayOperatorClicked(){
+    displayArea.append(operatorClicked);
+    console.log(operatorClicked); 
+    setTimeout(clearDisplay, 500);
+};
 
 //clear button event listener
 const clear = (document.getElementById)("clear");
