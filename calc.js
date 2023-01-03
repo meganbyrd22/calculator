@@ -48,6 +48,7 @@ operatorButtons.forEach(operatorButton => {
 function displayOperatorClicked(){
     displayArea.append(operatorClicked);
     console.log(operatorClicked);
+    clearDisplay();
 }
 //clear button event listener
 const clear = (document.getElementById)("clear");
