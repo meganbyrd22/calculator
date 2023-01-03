@@ -1,5 +1,5 @@
 //add html elements
-let operatorButtonClicked = false;
+//let operatorButtonClicked = false;
 
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
@@ -12,7 +12,7 @@ let sum = Number(document.getElementById("sum"));
 let difference = Number(document.getElementById("difference"));
 let product = Number(document.getElementById("product"));
 let quotient = Number(document.getElementById("quotient"));
-
+let result = Number(document.getElementById("result"));
 
 //eventListeners
 
@@ -30,12 +30,13 @@ numberButtons.forEach(numberButton => {
 }
 )
 
-
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
+        
         num1 = Number(displayArea.textContent);
+
         //clear displayArea
         clearDisplay(displayArea);
         //append operatorClicked to displayArea
@@ -83,6 +84,7 @@ function addNumbers(num1, num2){
     //console.log(Number(sum));
     clearDisplay();
     displayArea.append(sum);
+    result = displayArea.textContent;
 }
 
 //subtraction function
@@ -90,6 +92,7 @@ function subtractNumbers(num1, num2){
     let  difference = num1 - num2;
     clearDisplay();
     displayArea.append(difference);
+    result = displayArea.textContent;
 }
 
 //multiplication function
@@ -97,6 +100,7 @@ function multiplyNumbers(num1, num2){
     let  product = num1 * num2;
     clearDisplay();
     displayArea.append(product);
+    result = displayArea.textContent;
 }
 
 //division function 
@@ -104,6 +108,7 @@ function divideNumbers(num1, num2){
     let  quotient = num1 / num2;
     clearDisplay();
     displayArea.append(quotient);
+    result = displayArea.textContent; 
 }
 
 
