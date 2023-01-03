@@ -38,18 +38,14 @@ operatorButtons.forEach(operatorButton => {
         num1 = Number(displayArea.textContent);
         //clear displayArea
         clearDisplay(displayArea);
-        //create operatorClicked variable
+        //append operatorClicked to displayArea
         operatorClicked = `${e.target.id}`;
-        displayOperatorClicked(operatorClicked);
+        displayArea.append(operatorClicked)
+        //displayOperatorClicked(operatorClicked);
     })
 }
 )
-//append operatorClicked 
-function displayOperatorClicked(){
-    displayArea.append(operatorClicked);
-    console.log(operatorClicked);
-    clearDisplay();
-}
+
 //clear button event listener
 const clear = (document.getElementById)("clear");
 clear.addEventListener('click', () => {
