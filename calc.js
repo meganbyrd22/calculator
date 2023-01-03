@@ -28,7 +28,10 @@ numberButtons.forEach(numberButton => {
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
     console.log(numberClicked)
-    checkNumbers(result, num1,num2)
+    //checkNumbers(result, num1,num2)
+    if(operatorClicked !== null){
+        operate()
+    }
     })
     })
 
@@ -43,6 +46,7 @@ operatorButtons.forEach(operatorButton => {
         //append operatorClicked to displayArea
         operatorClicked = `${e.target.id}`;
         displayOperatorClicked(operatorClicked);
+        checkNumbers();
     })})
 
 //function to append operatorClicked to DOM
@@ -72,39 +76,29 @@ equal.addEventListener('click', () => {
 
 //function to check if both numbers are declared
 function checkNumbers(){
-    if(result != undefined){
+    if(result != null){
         num3 = result;
-        operateAgain(result);
+        operate(result);
     }
-    else if (num1 && num2 != undefined){
+    else if (num1 && num2 != null){
         operate(num1, num2)
     }
 }
 
 //operate function 
 function operate(num1,num2,operatorClicked){
-    ;
     if (operatorClicked === "+") addNumbers(num1, num2);
     if (operatorClicked === "-") subtractNumbers(num1, num2);
     if (operatorClicked === "*") multiplyNumbers(num1, num2);
     if (operatorClicked === "/") divideNumbers(num1, num2);
 }
 
-//second operate function
-function operateAgain(num3, num2, operatorClicked){
-    if (operatorClicked === "+") addNumbers(num3, num2);
-    if (operatorClicked === "-") subtractNumbers(num3, num2);
-    if (operatorClicked === "*") multiplyNumbers(num3, num2);
-    if (operatorClicked === "/") divideNumbers(num3, num2);
-}
-
 //addition function 
 function addNumbers(num1, num2){
     result = (num1 + num2);
-    //console.log(Number(sum));
     clearDisplay();
     displayArea.append(result);
-    //result = displayArea.textContent;
+    console.log(result);
 }
 
 //subtraction function
@@ -112,7 +106,6 @@ function subtractNumbers(num1, num2){
     result = num1 - num2;
     clearDisplay();
     displayArea.append(result);
-    result = displayArea.textContent;
 }
 
 //multiplication function
@@ -120,7 +113,6 @@ function multiplyNumbers(num1, num2){
     result = num1 * num2;
     clearDisplay();
     displayArea.append(result);
-    //result = displayArea.textContent;
 }
 
 //division function 
@@ -128,7 +120,6 @@ function divideNumbers(num1, num2){
     result = num1 / num2;
     clearDisplay();
     displayArea.append(result);
-    //result = displayArea.textContent; 
 }
 
 
