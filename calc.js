@@ -9,6 +9,7 @@ let num2 = Number(" ");
 let num3 = Number(" ");
 let numberClicked = document.getElementById('numberClicked');
 let operatorClicked = document.getElementById("operatorClicked");
+let secondOperatorClicked = document.getElementById("secondOperatorClicked");
 
 
 let sum = Number(document.getElementById("sum"));
@@ -35,27 +36,26 @@ numberButtons.forEach(numberButton => {
     }
     else if(operatorClicked != null){
         num2 = Number(displayArea.textContent);
-        operate(num1, num2, operatorClicked);
+        operate(num1, num2, operatorClicked);}
+    else if (result != null && secondOperatorClicked != null){
+        num3 = displayArea.textContent;
     }
-    else if(num1 != null && num2 != null){
-        num3 = result;
-    }
+    } ) })
     
-    })
-    })
 
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
-        
         //clear displayArea
         clearDisplay(displayArea);
         //append operatorClicked to displayArea
         operatorClicked = `${e.target.id}`;
         displayOperatorClicked(operatorClicked);
-        checkNumbers();
+        if(result != null){
+            secondOperatorClicked = `${e.target.id}`;
+        }
     })})
 
 //function to append operatorClicked to DOM
@@ -129,42 +129,3 @@ function divideNumbers(num1, num2){
     clearDisplay();
     displayArea.append(result);
 }
-
-
-//Button1.addEventListener('click', () => {})
-//Button2.addEventListener('click', () => {})
-//Button3.addEventListener('click', () => {})
-//Button4.addEventListener('click', () => {})
-//Button5.addEventListener('click', () => {})
-//Button6.addEventListener('click', () => {})
-//Button7.addEventListener('click', () => {})
-//Button8.addEventListener('click', () => {})
-//Button9.addEventListener('click', () => {})
-//Button0.addEventListener('click', () => {})
-
-//addButton.addEventListener('click', () => {})
-//subtractButton.addEventListener('click', () => {})
-//multiplyButton.addEventListener('click', () => {})
-//divideButton.addEventListener('click', () => {})
-//equalButton.addEventListener('click', () => {})
-
-//clearButton.addEventListener('click', () => {})
-
-
-const Button1 = document.getElementById("Button1")
-const Button2 = document.getElementById("Button2")
-const Button3 = document.getElementById("Button3")
-const Button4 = document.getElementById("Button4")
-const Button5 = document.getElementById("Button5")
-const Button6 = document.getElementById("Button6")
-const Button7 = document.getElementById("Button7")
-const Button8 = document.getElementById("Button8")
-const Button9 = document.getElementById("Button9")
-const Button0 = document.getElementById("Button0")
-const displayArea = document.getElementById("displayArea");
-
-
-const addButton = document.getElementById("addButton");
-const subtractButton = document.getElementById("subtractButton");
-const multiplyButton = document.getElementById("multiplyButton");
-const divideButton = document.getElementById("divideButton");
