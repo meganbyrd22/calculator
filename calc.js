@@ -1,5 +1,4 @@
 //add html elements
-//let operatorButtonClicked = false;
 
 const equalButton = document.getElementById("equalButton");
 const clearButton = document.getElementById("clear");
@@ -37,8 +36,9 @@ numberButtons.forEach(numberButton => {
     else if(operatorClicked != null){
         num2 = Number(displayArea.textContent);
         operate(num1, num2, operatorClicked);}
-    else if (result != null && secondOperatorClicked != null){
-        num3 = displayArea.textContent;
+    else if (result != null && operatorClicked != null){
+        num1 = result;
+        operate(num1, num2, operatorClicked);
     }
     } ) })
     
@@ -52,10 +52,7 @@ operatorButtons.forEach(operatorButton => {
         clearDisplay(displayArea);
         //append operatorClicked to displayArea
         operatorClicked = `${e.target.id}`;
-        displayOperatorClicked(operatorClicked);
-        if(result != null){
-            secondOperatorClicked = `${e.target.id}`;
-        }
+        displayOperatorClicked(operatorClicked)
     })})
 
 //function to append operatorClicked to DOM
@@ -81,17 +78,6 @@ const equal = (document.getElementById)("equal");
 equal.addEventListener('click', () => {
     operate(num1, num2, operatorClicked);
 })
-
-//function to check if both numbers are declared
-function checkNumbers(){
-    if(result != null){
-        num3 = result;
-        operate(result, num2, num3);
-    }
-    else if (num1 && num2 != null){
-        operate(num1, num2)
-    }
-}
 
 //operate function 
 function operate(num1,num2,operatorClicked){
