@@ -28,11 +28,19 @@ numberButtons.forEach(numberButton => {
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
     console.log(numberClicked);
-    num1 = Number(displayArea.textContent);
+    ;
     //checkNumbers(result, num1,num2)
-    if(operatorClicked !== null){
-        operate()
+    if(operatorClicked == null){
+        num1 = Number(displayArea.textContent)
     }
+    else if(operatorClicked != null){
+        num2 = Number(displayArea.textContent);
+        operate(num1, num2, operatorClicked);
+    }
+    else if(num1 != null && num2 != null){
+        num3 = result;
+    }
+    
     })
     })
 
@@ -71,7 +79,6 @@ function clearDisplay(){
 //equal button eventListener
 const equal = (document.getElementById)("equal");
 equal.addEventListener('click', () => {
-    num2 = Number(displayArea.textContent);
     operate(num1, num2, operatorClicked);
 })
 
