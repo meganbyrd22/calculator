@@ -27,7 +27,8 @@ numberButtons.forEach(numberButton => {
     //append numberClicked to displayArea
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
-    console.log(numberClicked)
+    console.log(numberClicked);
+    num1 = Number(displayArea.textContent);
     //checkNumbers(result, num1,num2)
     if(operatorClicked !== null){
         operate()
@@ -40,7 +41,7 @@ numberButtons.forEach(numberButton => {
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click',(e) => { 
-        num1 = Number(displayArea.textContent);
+        
         //clear displayArea
         clearDisplay(displayArea);
         //append operatorClicked to displayArea
@@ -78,7 +79,7 @@ equal.addEventListener('click', () => {
 function checkNumbers(){
     if(result != null){
         num3 = result;
-        operate(result);
+        operate(result, num2, num3);
     }
     else if (num1 && num2 != null){
         operate(num1, num2)
