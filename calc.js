@@ -48,6 +48,14 @@ function checkNumbers(){
     }
     operate(num1, num2, operatorClicked)
     }
+
+//function to reassign num1
+function reassignNums(){
+    if(result != null){
+        num1 = result;
+    }
+    operate();
+}
     
 
 //operator buttons listener
@@ -94,12 +102,13 @@ function operate(num1,num2,operatorClicked){
     if (operatorClicked === "-") subtractNumbers(num1, num2);
     if (operatorClicked === "*") multiplyNumbers(num1, num2);
     if (operatorClicked === "/") divideNumbers(num1, num2);
-    num1 = result;
+ 
 }
 
 //addition function 
 function addNumbers(num1, num2){
     result = (num1 + num2);
+    reassignNums();
     //console.log(result);
 }
 
