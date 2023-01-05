@@ -40,21 +40,16 @@ function checkNumbers(){
     else if(operatorClicked != null){
         num2 = Number(numberClicked);
         operate(num1, num2, operatorClicked);
-    }
-    else if(result != null && operatorClicked != null && num3 != null){
-        //num4 = Number(numberClicked);
-        num1 = num3;
-        //num2 = num4;
-    }
-    operate(num1, num2, operatorClicked)
-    }
+        reassignNums(result);
+    }}
+    //else (reassignNums())}
 
 //function to reassign num1
 function reassignNums(){
     if(result != null){
         num1 = result;
     }
-    operate();
+    //operate();
 }
     
 
@@ -90,10 +85,8 @@ function clearDisplay(){
 //equal button eventListener
 const equal = (document.getElementById)("equal");
 equal.addEventListener('click', () => {
-    operate(num1, num2, operatorClicked);
     clearDisplay();
     displayArea.append(Number(result));
-    num3 = result;
 })
 
 //operate function 
@@ -102,13 +95,11 @@ function operate(num1,num2,operatorClicked){
     if (operatorClicked === "-") subtractNumbers(num1, num2);
     if (operatorClicked === "*") multiplyNumbers(num1, num2);
     if (operatorClicked === "/") divideNumbers(num1, num2);
- 
 }
 
 //addition function 
 function addNumbers(num1, num2){
     result = (num1 + num2);
-    reassignNums();
     //console.log(result);
 }
 
