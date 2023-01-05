@@ -49,7 +49,6 @@ function reassignNums(){
     if(result != null){
         num1 = result;
     }
-    //operate();
 }
     
 
