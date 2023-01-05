@@ -5,7 +5,7 @@ const clearButton = document.getElementById("clear");
 
 let num1 = Number(" ");
 let num2 = Number(" ");
-let num3 = Number(" ");
+let num3 = num1;
 let num4 = Number(" ");
 let numberClicked = document.getElementById('numberClicked');
 let operatorClicked = document.getElementById("operatorClicked");
@@ -29,8 +29,7 @@ numberButtons.forEach(numberButton => {
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
     console.log(numberClicked);
-    ;
-    checkNumbers(numberClicked)})
+    checkNumbers(numberClicked)})})
 
 
 //function to check numbers
@@ -41,19 +40,15 @@ function checkNumbers(){
     else if(operatorClicked != null){
         num2 = Number(numberClicked);
         operate(num1, num2, operatorClicked);
-        checkSecondOp();
     }
-    } })
-    
-//function to check for second operation
-function checkSecondOp(result){
-    if(result != null && operatorClicked != null){
-        num3 = Number(result);
-        num4 = Number(displayArea.textContent);
+    else if(result != null && operatorClicked != null && num3 != null){
+        //num4 = Number(numberClicked);
         num1 = num3;
-        num2 = num4;
-        operate(num1, num2, operatorClicked)};
-}
+        //num2 = num4;
+    }
+    operate(num1, num2, operatorClicked)
+    }
+    
 
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
@@ -64,7 +59,6 @@ operatorButtons.forEach(operatorButton => {
         //append operatorClicked to displayArea
         operatorClicked = `${e.target.id}`;
         displayOperatorClicked(operatorClicked);
-        
     })})
 
 //function to append operatorClicked to DOM
@@ -91,6 +85,7 @@ equal.addEventListener('click', () => {
     operate(num1, num2, operatorClicked);
     clearDisplay();
     displayArea.append(Number(result));
+    num3 = result;
 })
 
 //operate function 
@@ -99,13 +94,13 @@ function operate(num1,num2,operatorClicked){
     if (operatorClicked === "-") subtractNumbers(num1, num2);
     if (operatorClicked === "*") multiplyNumbers(num1, num2);
     if (operatorClicked === "/") divideNumbers(num1, num2);
-    num3 = result;
+    num1 = result;
 }
 
 //addition function 
 function addNumbers(num1, num2){
     result = (num1 + num2);
-    console.log(result);
+    //console.log(result);
 }
 
 //subtraction function
