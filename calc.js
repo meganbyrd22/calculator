@@ -16,7 +16,7 @@ let sum = Number(document.getElementById("sum"));
 let difference = Number(document.getElementById("difference"));
 let product = Number(document.getElementById("product"));
 let quotient = Number(document.getElementById("quotient"));
-let result = Number(" ");
+let result = Math.round(Number(" "));
 
 //eventListeners
 
