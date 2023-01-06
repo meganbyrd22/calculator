@@ -29,11 +29,7 @@ numberButtons.forEach(numberButton => {
     displayArea.append(numberButtonClicked);
     numberClicked = displayArea.textContent;
     console.log(numberClicked);
-    checkNumbers(numberClicked)})})
-
-
-//function to check numbers
-function checkNumbers(){
+    //assign numbers based on numberClicked
     if(operatorClicked == null){
         num1 = Number(numberClicked);
     }
@@ -41,7 +37,20 @@ function checkNumbers(){
         num2 = Number(numberClicked);
         operate(num1, num2, operatorClicked);
         reassignNums(result);
-    }}
+    }})})
+    //checkNumbers(numberClicked)})})
+
+
+//function to check numbers
+//function checkNumbers(){
+    //if(operatorClicked == null){
+       // num1 = Number(numberClicked);
+    //}
+    //else if(operatorClicked != null){
+    //    num2 = Number(numberClicked);
+       // operate(num1, num2, operatorClicked);
+       // reassignNums(result);
+   // }}
     //else (reassignNums())}
 
 //function to reassign num1
