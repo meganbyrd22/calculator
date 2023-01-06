@@ -123,5 +123,9 @@ function multiplyNumbers(num1, num2){
 
 //division function 
 function divideNumbers(num1, num2){
-    result = num1 / num2;
+    if(num2 === 0){
+        alert("Can't divide by 0 ya goof!");
+    }
+    else{result = num1 / num2};
 }
+
