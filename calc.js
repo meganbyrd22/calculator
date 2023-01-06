@@ -82,12 +82,17 @@ function displayOperatorClicked(){
 //clear button event listener
 const clear = (document.getElementById)("clear");
 clear.addEventListener('click', () => {
-    displayArea.replaceChildren()
+    clearDisplay();
+    num1 = "0";
+    num2 = "";
+    operatorClicked = null;
+    //result = "";
 })
 
 //function to clear displayArea
 function clearDisplay(){
-    displayArea.replaceChildren()
+    displayArea.replaceChildren();
+   
 };
 
 //equal button eventListener
