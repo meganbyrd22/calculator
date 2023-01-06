@@ -38,29 +38,14 @@ numberButtons.forEach(numberButton => {
         operate(num1, num2, operatorClicked);
         reassignNums(result);
     }})})
-    //checkNumbers(numberClicked)})})
 
-
-//function to check numbers
-//function checkNumbers(){
-    //if(operatorClicked == null){
-       // num1 = Number(numberClicked);
-    //}
-    //else if(operatorClicked != null){
-    //    num2 = Number(numberClicked);
-       // operate(num1, num2, operatorClicked);
-       // reassignNums(result);
-   // }}
-    //else (reassignNums())}
-
-//function to reassign num1
+//function to reassign num1 as result
 function reassignNums(){
     if(result != null){
         num1 = result;
     }
 }
     
-
 //operator buttons listener
 const operatorButtons = document.querySelectorAll('.operatorButtons');
 operatorButtons.forEach(operatorButton => {
@@ -76,7 +61,7 @@ operatorButtons.forEach(operatorButton => {
 function displayOperatorClicked(){
     displayArea.append(operatorClicked);
     console.log(operatorClicked); 
-    setTimeout(clearDisplay, 500);
+    setTimeout(clearDisplay, 300);
 };
 
 //clear button event listener
@@ -111,7 +96,6 @@ function operate(num1,num2,operatorClicked){
 //addition function 
 function addNumbers(num1, num2){
     result = (num1 + num2);
-    //console.log(result);
 }
 
 //subtraction function
