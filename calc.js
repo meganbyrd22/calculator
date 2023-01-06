@@ -84,9 +84,7 @@ const clear = (document.getElementById)("clear");
 clear.addEventListener('click', () => {
     clearDisplay();
     num1 = "0";
-    num2 = "";
     operatorClicked = null;
-    //result = "";
 })
 
 //function to clear displayArea
